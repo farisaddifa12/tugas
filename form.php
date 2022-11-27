@@ -45,22 +45,22 @@ $row = $result->fetch_assoc();
 
 
     <label>Masukkan data id</label><br>
-    <input type="text" name="id"  value="<?php echo $row ["id"] ?>"><br>
+    <input type="text" name="id"  value="<?php echo $row [""] ?>"><br>
 
     <label>Masukkan Nama</label><br>
-    <input type="text" name="Nama" value="<?php echo $row ["Nama"] ?>"><br> 
+    <input type="text" name="Nama" value="<?php echo $row [""] ?>"><br> 
 
     <label>Masukkan Asal</label><br>
-    <input type="text" name="Asal" value="<?php echo $row ["Asal"] ?>"><br>  
+    <input type="text" name="Asal" value="<?php echo $row [""] ?>"><br>  
 
     <label>Masukkan Usia</label><br>
-    <input type="text" name="Usia" value="<?php echo $row ["Usia"] ?>"><br> 
+    <input type="text" name="Usia" value="<?php echo $row [""] ?>"><br> 
 
     <label>Masukkan Alamat</label><br>
-    <input type="text" name="Alamat" value="<?php echo $row ["Alamat"] ?>"><br>
+    <input type="text" name="Alamat" value="<?php echo $row [""] ?>"><br>
 
     <label>Masukkan Nama Orang Tua</label><br>
-    <input type="text" name="Ortu" value="<?php echo $row ["Ortu"] ?>"><br>
+    <input type="text" name="Ortu" value="<?php echo $row [""] ?>"><br>
 
     <input type="submit" value="kirim">
 </form>
