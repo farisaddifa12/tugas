@@ -1,17 +1,19 @@
 <!doctype html>
 <head>
     <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nyoba Cok</title>
+    <title>Data Sukses</title>
 
 </head>
 <body>
 <main>
-    <div class="conatiner">
+
+    <div class="container">
         <h1 class="display-5 fw-bold" style="color: black">Data Berhasil Diupdate</h1>
     </div>
     <div class="d-grid gap-2 d-sm-flex">
-    <a href="nyoba.php">
+    <a href="form.php" type="button" class="btn btn-primary mb-3">Kembali</a>
 <?php
 
 
@@ -37,9 +39,9 @@ $Alamat= $_POST['Alamat'];
 $Ortu= $_POST['Ortu'];
 
 $sql = "INSERT INTO `data` (`id`, `Nama`, `Asal`, `Usia`, `Alamat`, `Ortu`) VALUES (NULL, '$id', '$Nama', '$Usia', '$Asal', '$Ortu');"; 
-$result = $conn->query($sql);
+  $result = $conn->query($sql);
 
-  $conn->close();
+    $conn->close();
 ?>
 
 </body>

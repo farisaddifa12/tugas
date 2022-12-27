@@ -1,7 +1,16 @@
 <!doctype html>
-<header>
-    <h1>Formulir Pendaftaran
-</header>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Formulir Pendaftaran</title>
+</head>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <h1 class="fs-4">Formulir Pendaftaran</h1>
+      </a>
+    </header>
+</div>
 
 <?php
 
@@ -28,12 +37,7 @@ $sql = "SELECT * FROM `data`";
 $result = $conn->query($sql);
 
 
-if ($conn->query($sql) === TRUE) {
-  
-} else {
-  
-}
-$conn->close();
+
 ?>
 
 
@@ -42,27 +46,32 @@ echo "<form action=\"http://localhost/tugas/update.php\" method=\"POST\">";
 $row = $result->fetch_assoc();
 ?>
 
-
-
-    <label>Masukkan data id</label><br>
-    <input type="text" name="id"  value="<?php echo $row ["id"] ?>"><br>
-
+<div class="container mt-5">
+  <div class="mb-3">
+    <input type="hidden" class="form-control" name="id"  value=""><br>
+  </div>
+  <div class="mb-3">
     <label>Masukkan Nama</label><br>
-    <input type="text" name="Nama" value="<?php echo $row ["Nama"] ?>"><br> 
-
+    <input type="text" class="form-control" name="Nama" value=""><br> 
+  </div>
+  <div class="mb-3">
     <label>Masukkan Asal</label><br>
-    <input type="text" name="Asal" value="<?php echo $row ["Asal"] ?>"><br>  
-
+    <input type="text" class="form-control" name="Asal" value=""><br>  
+  </div>
+  <div class="mb-3">
     <label>Masukkan Usia</label><br>
-    <input type="text" name="Usia" value="<?php echo $row ["Usia"] ?>"><br> 
-
+    <input type="text" class="form-control" name="Usia" value=""><br> 
+  </div>
+  <div class="mb-3">
     <label>Masukkan Alamat</label><br>
-    <input type="text" name="Alamat" value="<?php echo $row ["Alamat"] ?>"><br>
-
+    <input type="text" class="form-control" name="Alamat" value=""><br>
+  </div>
+  <div class="mb-3">
     <label>Masukkan Nama Orang Tua</label><br>
-    <input type="text" name="Ortu" value="<?php echo $row ["Ortu"] ?>"><br>
-
-    <input type="submit" value="kirim">
+    <input type="text" class="form-control" name="Ortu" value=""><br>
+  </div>
+    <input type="submit" class="btn btn-primary mb-3" value="kirim">
+</div>
 </form>
 
   
